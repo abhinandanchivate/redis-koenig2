@@ -279,3 +279,260 @@ user:1  -> "Scripted User"
 - Generating unique IDs for users or objects.
 - Setting related data atomically.
 - Ensuring consistency and avoiding race conditions.
+
+
+Here are detailed examples for various **Redis String Commands** with explanations:
+
+---
+
+## 1. **APPEND** – Append a value to a key's existing value
+### Syntax:
+```bash
+APPEND key value
+```
+### Example:
+```bash
+redis-cli SET message "Hello"
+redis-cli APPEND message " World"
+redis-cli GET message
+```
+### ✅ Output:
+```text
+"Hello World"
+```
+- If the key does not exist, `APPEND` creates the key and sets the value.
+
+---
+
+## 2. **GETRANGE** – Get a substring of the string value stored at a key
+### Syntax:
+```bash
+GETRANGE key start end
+```
+### Example:
+```bash
+redis-cli SET message "Hello World"
+redis-cli GETRANGE message 0 4
+```
+### ✅ Output:
+```text
+"Hello"
+```
+- `start` and `end` are zero-based indices.
+
+---
+
+## 3. **GETSET** – Set a new value and return the old value
+### Syntax:
+```bash
+GETSET key value
+```
+### Example:
+```bash
+redis-cli SET message "Hello"
+redis-cli GETSET message "Hi"
+redis-cli GET message
+```
+### ✅ Output:
+```text
+"Hello"   -- Output of GETSET
+"Hi"      -- Output of GET
+```
+- Returns the old value and sets a new value.
+
+---
+
+## 4. **GETBIT** – Get the bit at a specific offset
+### Syntax:
+```bash
+GETBIT key offset
+```
+### Example:
+```bash
+redis-cli SETBIT bitkey 5 1
+redis-cli GETBIT bitkey 5
+```
+### ✅ Output:
+```text
+1
+```
+- Sets the 5th bit of `bitkey` to `1` and retrieves its value.
+
+---
+
+## 5. **STRLEN** – Get the length of the value stored in a key
+### Syntax:
+```bash
+STRLEN key
+```
+### Example:
+```bash
+redis-cli SET message "Hello World"
+redis-cli STRLEN message
+```
+### ✅ Output:
+```text
+11
+```
+- Returns the length of the string stored at the key.
+
+---
+
+## 6. **DECR** – Decrement a key's integer value by 1
+### Syntax:
+```bash
+DECR key
+```
+### Example:
+```bash
+redis-cli SET count 10
+redis-cli DECR count
+redis-cli GET count
+```
+### ✅ Output:
+```text
+9
+```
+- Decrements the value of `count` by 1.
+
+---
+
+## 7. **INCRBYFLOAT** – Increment a key's value by a float value
+### Syntax:
+```bash
+INCRBYFLOAT key increment
+```
+### Example:
+```bash
+redis-cli SET balance 100.5
+redis-cli INCRBYFLOAT balance 5.3
+redis-cli GET balance
+```
+### ✅ Output:
+```text
+105.8
+```
+- Increments the value by a floating-point number.
+
+---
+
+## 8. **DECRBY** – Decrement a key's integer value by a specified value
+### Syntax:
+```bash
+DECRBY key decrement
+```
+### Example:
+```bash
+redis-cli SET count 20
+redis-cli DECRBY count 5
+redis-cli GET count
+```
+### ✅ Output:
+```text
+15
+```
+- Decreases the value by a specific integer.
+
+---
+
+## 9. **MSETNX** – Set multiple keys only if none of the keys exist
+### Syntax:
+```bash
+MSETNX key value [key value ...]
+```
+### Example:
+```bash
+redis-cli MSETNX user:1 "Alice" user:2 "Bob"
+redis-cli MSETNX user:1 "Charlie" user:3 "David"
+redis-cli GET user:1
+redis-cli GET user:3
+```
+### ✅ Output:
+```text
+"Alice"   -- user:1 was already set, so MSETNX fails
+(nil)     -- user:3 was not set due to failure
+```
+- Fails if **ANY key already exists**.
+
+---
+
+## 10. **SETEX** – Set a key with a value and expiration time in seconds
+### Syntax:
+```bash
+SETEX key seconds value
+```
+### Example:
+```bash
+redis-cli SETEX session 10 "active"
+redis-cli TTL session
+```
+### ✅ Output:
+```text
+10  -- Key will expire in 10 seconds
+```
+- Sets a key with a value and expiration in seconds.
+
+---
+
+## 11. **SETRANGE** – Overwrite part of a string at a specific offset
+### Syntax:
+```bash
+SETRANGE key offset value
+```
+### Example:
+```bash
+redis-cli SET message "Hello World"
+redis-cli SETRANGE message 6 "Redis"
+redis-cli GET message
+```
+### ✅ Output:
+```text
+"Hello Redis"
+```
+- Overwrites the string starting at the specified offset.
+
+---
+
+## 12. **PSETEX** – Set a key with a value and expiration time in milliseconds
+### Syntax:
+```bash
+PSETEX key milliseconds value
+```
+### Example:
+```bash
+redis-cli PSETEX session 5000 "active"
+redis-cli PTTL session
+```
+### ✅ Output:
+```text
+5000   -- Key will expire in 5000 milliseconds (5 seconds)
+```
+- Sets a key with a value and expiration in milliseconds.
+
+---
+
+## ✅ **Summary of Usage**
+| Command | Description |
+|---------|-------------|
+| `APPEND` | Append value to existing key |
+| `GETRANGE` | Get substring of value |
+| `GETSET` | Set new value and return old value |
+| `GETBIT` | Get the bit value at offset |
+| `STRLEN` | Get length of value |
+| `DECR` | Decrement integer value |
+| `INCRBYFLOAT` | Increment float value |
+| `DECRBY` | Decrement by a specific value |
+| `MSETNX` | Set multiple keys only if none exist |
+| `SETEX` | Set value with expiration (seconds) |
+| `SETRANGE` | Overwrite part of a string |
+| `PSETEX` | Set value with expiration (milliseconds) |
+
+---
+
+### 🚀 **Best Practices:**
+✅ Use `PSETEX` or `SETEX` for setting time-to-live (TTL).  
+✅ Use `GETSET` carefully in atomic operations.  
+✅ `APPEND`, `INCR`, `DECR` work well for counters and logs.  
+✅ `MSETNX` is useful for setting unique values.  
+
+Let me know if you'd like to explore more! 😎
