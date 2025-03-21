@@ -2,14 +2,38 @@ version: '3.9'
 
 services:
 
+  redisinsight:
+    container_name: redisinsight
+    image: redis/redisinsight:latest
+    restart: always
+    ports:
+      - "5540:5540"
+    volumes:
+      - redis_data:/data   
+    user: root   # Run as root to fix permission issues
+    environment:
+      - REDISINSIGHT_DEBUG=true
+
   redis:
     image: redis:latest
     container_name: redis
     ports:
-      -6379:6379
+      - 6379:6379
     command: ["redis-server","--appendonly","yes"]
     # redis-server : start the redis server
     # --appendonly yes ==> enables AOF (append only File) persistance
     # AOF logs every write operation and replays them when redis restart
     # this ensures better durability since it logs every change to the disk
-    
+    volumes:
+      - redis_data:/data
+      - ./redis.conf:/etc/redis/redis.conf
+    restart: always
+    healthcheck:
+      test: ["CMD", "redis-cli","ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+volumes:
+  redis_data:
+
+
