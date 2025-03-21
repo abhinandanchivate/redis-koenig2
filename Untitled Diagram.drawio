@@ -1,0 +1,87 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="26.1.1" pages="2">
+  <diagram name="Page-1" id="fBzzzCoeT2SM5FO79rE6">
+    <mxGraphModel dx="1593" dy="411" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="y1xmJVw4qOxCyvWm1Il5-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="y1xmJVw4qOxCyvWm1Il5-1" target="y1xmJVw4qOxCyvWm1Il5-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y1xmJVw4qOxCyvWm1Il5-1" value="Redis(remote Dictionary Server)&amp;nbsp; :&amp;nbsp; is an licensed one , in memory data store taht can be used as a database, cache and message broker.&amp;nbsp;&lt;div&gt;Redis is a part of the No SQL family. which is following key-value store model.&amp;nbsp;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="50" width="550" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="y1xmJVw4qOxCyvWm1Il5-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="y1xmJVw4qOxCyvWm1Il5-2" target="y1xmJVw4qOxCyvWm1Il5-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y1xmJVw4qOxCyvWm1Il5-2" value="No SQL : not only SQL and it refers to non relational databases that store the data in a non tabular format.&lt;div&gt;it is mainly used to handle :&amp;nbsp;&lt;/div&gt;&lt;div&gt;1. large volumes of data (big data) ==&amp;gt; ecommerce (mongoDB)&lt;/div&gt;&lt;div&gt;2. unstructured one or semi structured one.&lt;/div&gt;&lt;div&gt;3. Horizontal scaling (scale out model)&lt;/div&gt;&lt;div&gt;4. High availability and fault tolerance&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="190" width="569" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="y1xmJVw4qOxCyvWm1Il5-3" value="&lt;div&gt;{&lt;/div&gt;&lt;div&gt;&amp;nbsp; &quot;order_id&quot;: &quot;12345&quot;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &quot;customer&quot;: {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &quot;id&quot;: &quot;CUST001&quot;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &quot;name&quot;: &quot;John Doe&quot;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &quot;email&quot;: &quot;john.doe@example.com&quot;&lt;/div&gt;&lt;div&gt;&amp;nbsp; },&lt;/div&gt;&lt;div&gt;&amp;nbsp; &quot;items&quot;: [&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;item_id&quot;: &quot;ITEM001&quot;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;name&quot;: &quot;Laptop&quot;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;price&quot;: 1200.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;quantity&quot;: 1&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; },&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;item_id&quot;: &quot;ITEM002&quot;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;name&quot;: &quot;Wireless Mouse&quot;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;price&quot;: 25.00,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &quot;quantity&quot;: 2&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; }&lt;/div&gt;&lt;div&gt;&amp;nbsp; ],&lt;/div&gt;&lt;div&gt;&amp;nbsp; &quot;status&quot;: &quot;Shipped&quot;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &quot;shipping_address&quot;: {&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &quot;street&quot;: &quot;123 Main Street&quot;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &quot;city&quot;: &quot;New York&quot;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &quot;zip&quot;: &quot;10001&quot;&lt;/div&gt;&lt;div&gt;&amp;nbsp; }&lt;/div&gt;&lt;div&gt;}&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="281" y="400" width="499" height="550" as="geometry" />
+        </mxCell>
+        <mxCell id="y1xmJVw4qOxCyvWm1Il5-5" value="&lt;div&gt;CREATE TABLE orders (&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; order_id UUID PRIMARY KEY,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; customer_name TEXT,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; customer_email TEXT,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; items MAP&amp;lt;TEXT, FLOAT&amp;gt;,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; shipping_address TEXT,&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; status TEXT&lt;/div&gt;&lt;div&gt;);&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="560" width="270" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="y1xmJVw4qOxCyvWm1Il5-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="y1xmJVw4qOxCyvWm1Il5-6" target="y1xmJVw4qOxCyvWm1Il5-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y1xmJVw4qOxCyvWm1Il5-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="y1xmJVw4qOxCyvWm1Il5-6" target="y1xmJVw4qOxCyvWm1Il5-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="y1xmJVw4qOxCyvWm1Il5-6" value="Key-Value Model&lt;div&gt;A key is an unique identifier (like a primary key in SQL)&lt;/div&gt;&lt;div&gt;vale is the actual data stored against the key&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="-390" y="42.5" width="165" height="105" as="geometry" />
+        </mxCell>
+        <mxCell id="y1xmJVw4qOxCyvWm1Il5-8" value="Key : 1. key max size 512 MB&lt;div&gt;2. it can include spaces and special characters.&lt;/div&gt;&lt;div&gt;3. should follow a structured format (namespace:id)&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="-405.62" y="250" width="196.25" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="y1xmJVw4qOxCyvWm1Il5-12" value="Values : 1. can store diff data types :&amp;nbsp;&lt;div&gt;i. strings ==&amp;gt; text or binary data&lt;/div&gt;&lt;div&gt;ii. lists ==&amp;gt; ordered collections of string with set operations like union intersection, difference&lt;/div&gt;&lt;div&gt;iii. sets ==&amp;gt; unordered collections of unique strings with set operations like union, intersection and difference.&amp;nbsp;&lt;/div&gt;&lt;div&gt;iv. hashes : key value pairs within the key , suitable for storing structured data.&lt;/div&gt;&lt;div&gt;v. sorted sets: sets with associated scores used for ranked data&lt;/div&gt;&lt;div&gt;vi. bitmaps: binary data and hyperlogs&lt;/div&gt;&lt;div&gt;2. it can hold max : 512 MB&lt;/div&gt;" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="-640" y="235" width="230" height="245" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="ZHiUlziDPE30ZEmzHhmA" name="Page-2">
+    <mxGraphModel dx="743" dy="411" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="_zcnQinKwylbKH5AgHyO-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_zcnQinKwylbKH5AgHyO-1" target="_zcnQinKwylbKH5AgHyO-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_zcnQinKwylbKH5AgHyO-1" value="Client" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="140" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_zcnQinKwylbKH5AgHyO-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="_zcnQinKwylbKH5AgHyO-2" target="_zcnQinKwylbKH5AgHyO-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_zcnQinKwylbKH5AgHyO-2" value="Backend App" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="120" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_zcnQinKwylbKH5AgHyO-4" value="" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+          <mxGeometry x="630" y="110" width="60" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="_zcnQinKwylbKH5AgHyO-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="_zcnQinKwylbKH5AgHyO-6" target="_zcnQinKwylbKH5AgHyO-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_zcnQinKwylbKH5AgHyO-6" value="redis" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="520" y="120" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="_zcnQinKwylbKH5AgHyO-8" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="_zcnQinKwylbKH5AgHyO-6" target="_zcnQinKwylbKH5AgHyO-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_zcnQinKwylbKH5AgHyO-9" value="" style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="G4EILaMnlbsJJ-zbv440-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="G4EILaMnlbsJJ-zbv440-1" target="G4EILaMnlbsJJ-zbv440-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="G4EILaMnlbsJJ-zbv440-1" value="List : it is a collection of ordered elements where elements can be added or removed from both head and tail" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="130" y="440" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="G4EILaMnlbsJJ-zbv440-2" value="Sorted set usage : leaderboards, task scheduling, ordered events, priority queue" style="whiteSpace=wrap;html=1;rounded=1;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="180" y="580" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
